@@ -1,0 +1,244 @@
+.game__navigation {
+  ul {
+    padding-left: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    @media screen and (max-width: 1200px) {
+      flex-wrap: wrap;
+      max-width: 550px;
+    }
+    @media screen and (max-width: 600px) {
+      margin-top: 10px;
+      max-width: 430px;
+    }
+    @media screen and (max-width: 450px) {
+      gap: 8px 3px;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: $color-gray-light;
+    font-size: 18px;
+    @extend %btn;
+    width: 170px;
+    height: 30px;
+    margin: 0 auto;
+    @media screen and (max-width: 600px) {
+      width: 108px;
+      height: 25px;
+      font-size: 14px;
+    }
+  }
+}
+
+.game__score {
+  font-size: 25px;
+  margin: 10px 0 10px;
+  color: $color-gray-light;
+  font-size: 20px;
+  @media screen and (max-width: 700px) {
+    font-size: 20px;
+    margin: 45px 0 10px;
+  }
+}
+
+.game__question {
+  margin-top: 10px;
+  display: flex;
+  @extend %btn;
+  border-radius: 10px;
+  @media screen and (max-width: 570px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.game__question-img {
+  padding: 10px;
+  @media screen and (max-width: 570px) {
+    padding-bottom: 0;
+  }
+}
+
+.question__img {
+  border-radius: 10px;
+  max-width: 200px;
+  max-height: 155px;
+  @media screen and (max-width: 570px) {
+    width: 140px;
+  }
+}
+
+.game__question-sound {
+  padding: 10px;
+  width: 100%;
+  @media screen and (max-width: 570px) {
+    text-align: center;
+  }
+}
+
+.game__question-player {
+  background-color: transparent;
+}
+
+.name-hide {
+  color: $color-gray-light;
+  font-size: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-table;
+  @media screen and (max-width: 570px) {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+  }
+}
+
+.game__task {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+}
+
+.game__task-option {
+  @extend %btn;
+  border-radius: 10px;
+  flex: 0 1 50%;
+  div:not(:last-child) {
+    border-bottom: 1px solid $color-table;
+  }
+}
+
+.task-option-block {
+  display: flex;
+  align-items: center;
+}
+
+.option-color {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  border: 1px solid $color-table;
+  border-radius: 50%;
+  margin: 20px;
+  background-color: transparent;
+  @media screen and (max-width: 750px) {
+    margin: 12px;
+  }
+}
+
+.option-answer {
+  width: 100%;
+  font-size: 16px;
+  color: $color-gray-light;
+  cursor: pointer;
+  @media screen and (max-width: 750px) {
+    margin: 5px 0;
+  }
+}
+
+.game__task-answer {
+  @extend %btn;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  color: $color-gray-light;
+  flex: 0 1 50%;
+}
+
+.answer-start {
+  display: block;
+  line-height: 1.6;
+}
+
+.answer-result {
+  display: none;
+}
+
+.result-title {
+  display: flex;
+  @media screen and (max-width: 570px) {
+    flex-direction: column;
+  }
+}
+
+.result-img {
+  max-width: 200px;
+  max-height: 155px;
+  border-radius: 10px;
+  @media screen and (max-width: 570px) {
+    width: 43%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.result-name {
+  padding-left: 15px;
+  width: 100%;
+  @media screen and (max-width: 570px) {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.name-ru {
+  font-size: 25px;
+  margin: 5px 0 0 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-table;
+  @media screen and (max-width: 570px) {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.name-lat {
+  font-size: 20px;
+  margin: 11px 0 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-table;
+  @media screen and (max-width: 570px) {
+    font-size: 16px;
+    text-align: center;
+    margin: 7px 0 7px 0;
+    padding-bottom: 7px;
+  }
+}
+
+.result-content {
+  margin-top: 20px;
+  line-height: 1.4;
+  @media screen and (max-width: 570px) {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
+
+.btn-next {
+  @extend %btn;
+  border: none;
+  width: 260px;
+  height: 40px;
+  margin: 15px 0 20px;
+  color: #979797;
+  font-size: 20px;
+  transition: all 0.3s;
+  @media screen and (max-width: 570px) {
+    margin: 10px 0 10px;
+    font-size: 16px;
+    width: 230px;
+    height: 35px;
+  }
+}

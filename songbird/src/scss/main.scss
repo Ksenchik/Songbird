@@ -1,0 +1,15 @@
+// base
+@import "./base/normalize";
+
+// abstracts
+@import "./abstracts/variables";
+
+// components
+@import "./components/button";
+@import "./components/block";
+
+// pages
+@import "./pages/start";
+@import "./pages/game";
+@import "./pages/output";
+@import "./pages/galery";

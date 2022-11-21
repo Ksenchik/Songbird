@@ -1,0 +1,71 @@
+.output {
+  @extend %btn;
+  color: $color-gray-light;
+  margin: 70px auto 40px;
+  max-width: 600px;
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 30px 10px 20px;
+}
+
+.output__title {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px auto;
+  @media screen and(max-width: 450px) {
+    font-size: 35px;
+    margin-top: 0;
+  }
+}
+
+.output__text {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 0;
+  span {
+    font-size: 45px;
+    @media screen and(max-width: 450px) {
+      font-size: 33px;
+    }
+  }
+  @media screen and(max-width: 450px) {
+    font-size: 25px;
+    margin-top: 0;
+  }
+}
+
+.output__btn {
+  display: block;
+  @extend %btn;
+  color: $color-gray-light;
+  font-size: 20px;
+  width: 155px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  margin: 90px auto 30px;
+  padding: 10px 45px;
+  text-decoration: none;
+  transition: all 0.5s;
+  &:hover {
+    background: linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.22),
+      rgba(255, 255, 255, 0.25)
+    );
+  }
+  @media screen and(max-width: 450px) {
+    margin: 60px auto 20px;
+  }
+}
+
+.output__victory {
+  display: none;
+  font-size: 50px;
+  margin: 60px auto 30px;
+  text-align: center;
+  @media screen and(max-width: 450px) {
+    font-size: 40px;
+    margin: 55px auto 20px;
+  }
+}

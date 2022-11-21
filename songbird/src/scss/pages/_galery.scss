@@ -1,0 +1,114 @@
+.gallery {
+  @extend %btn;
+  max-width: 500px;
+  padding: 20px;
+  margin: 50px auto;
+  color: $color-gray-light;
+  position: relative;
+  h3 {
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 1px solid $color-table;
+    margin: 0;
+    padding: 0 0 10px 0;
+  }
+  @media screen and(max-width: 550px) {
+    padding: 15px;
+    margin: 50px auto 20px;
+  }
+}
+
+.gallery__img {
+  border-bottom: 1px solid $color-table;
+  padding-bottom: 20px;
+}
+
+.gallery__img-photo {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  max-height: 155px;
+  border-radius: 10px;
+  @media screen and(max-width: 550px) {
+    width: 45%;
+  }
+}
+
+.gallery__audio {
+  margin: 15px auto 0;
+  border-bottom: 1px solid $color-table;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.gallery__title-ru {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  // padding: 10px 0;
+  // border-bottom: 1px solid $color-table;
+  @media screen and(max-width: 550px) {
+    font-size: 24px;
+    // padding: 7px 0;
+  }
+}
+
+.gallery__title-lat {
+  font-size: 22px;
+  text-align: center;
+  margin: 0 auto;
+  // padding: 10px 0;
+  @media screen and(max-width: 550px) {
+    font-size: 18px;
+    // padding: 6px 0;
+  }
+}
+
+.gallery__content {
+  line-height: 1.4;
+  margin: 10px auto;
+  @media screen and(max-width: 550px) {
+    margin: 7px auto;
+  }
+}
+
+.gallery__left {
+  &::before {
+    content: "\2770";
+    font-size: 70px;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 50%;
+    left: -100px;
+    cursor: pointer;
+    transition: all 0.3s;
+    @media screen and(max-width: 750px) {
+      bottom: -100px;
+      left: 60px;
+    }
+  }
+}
+
+.gallery__right {
+  &::before {
+    content: "\2771";
+    font-size: 70px;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 50%;
+    right: -100px;
+    cursor: pointer;
+    transition: all 0.3s;
+    @media screen and(max-width: 750px) {
+      bottom: -100px;
+      right: 60px;
+    }
+  }
+}
+.gallery__left:hover:before {
+  color: $color-accent;
+}
+
+.gallery__right:hover:before {
+  color: $color-accent;
+}

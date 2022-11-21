@@ -1,0 +1,15 @@
+export function route(event) {
+  event = event || window.event;
+  event.preventDefault();
+
+  if (!event.target.href) return false;
+
+  const routePath = event.target.href
+    .replace("ksenchik-JSFE2022Q3/songbird/dist/", "")
+    .replace(window.location.origin, "")
+    .replace("songbird/dist/index.html", "")
+    .replace("/", "")
+    .replace("#", "");
+
+  window.location.hash = routePath;
+}
