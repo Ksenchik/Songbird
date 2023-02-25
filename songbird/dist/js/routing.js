@@ -5,9 +5,9 @@ export function route(event) {
   if (!event.target.href) return false;
 
   const routePath = event.target.href
-    .replace("/", "")
+    .replace("Songbird/songbird/dist/", "")
     .replace(window.location.origin, "")
-    .replace("songbird/dist/index.html", "")
+    .replace("index.html", "")
     .replace("/", "")
     .replace("#", "");
 
