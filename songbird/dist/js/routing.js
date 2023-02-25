@@ -5,9 +5,9 @@ export function route(event) {
   if (!event.target.href) return false;
 
   const routePath = event.target.href
-    .replace("Songbird/songbird/dist/", "")
+    .replace("ksenchik-JSFE2022Q3/songbird/dist/", "")
     .replace(window.location.origin, "")
-    .replace("index.html", "")
+    .replace("songbird/dist/index.html", "")
     .replace("/", "")
     .replace("#", "");
 
