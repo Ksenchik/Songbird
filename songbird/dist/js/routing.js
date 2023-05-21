@@ -5,7 +5,7 @@ export function route(event) {
   if (!event.target.href) return false;
 
   const routePath = event.target.href
-    .replace("ksenchik-JSFE2022Q3/songbird/dist/", "")
+    .replace("Songbird/songbird/dist/", "")
     .replace(window.location.origin, "")
     .replace("songbird/dist/index.html", "")
     .replace("/", "")
